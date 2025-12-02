@@ -26,5 +26,34 @@ repositories = {
         dismiss_stale_reviews           = true
       }
     }
+  },
+  "arc-raiders-scripts" = {
+    description = "Set of scripts for Arc Raiders automation"
+    visibility  = "public"
+
+    has_issues    = true
+    has_wiki      = true
+    has_downloads = true
+    has_projects  = true
+
+
+
+    auto_init          = false
+    gitignore_template = "Rust"
+    license_template   = "mit"
+
+    topics = ["rust", "arc-raiders", "automation"]
+
+    vulnerability_alerts = true
+
+    branch_protection = {
+      pattern                         = "main"
+      require_conversation_resolution = true
+
+      required_pull_request_reviews = {
+        required_approving_review_count = 1
+        dismiss_stale_reviews           = true
+      }
+    }
   }
 }
