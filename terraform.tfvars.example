@@ -1,0 +1,161 @@
+# GitHub owner (username or organization)
+github_owner = "your-github-username"
+
+# Define your repositories
+repositories = {
+  # Example 1: Public repository with strict branch protection
+  "my-awesome-app" = {
+    description = "My awesome application"
+    visibility  = "public"
+    
+    has_issues   = true
+    has_wiki     = false
+    has_projects = false
+    
+    auto_init          = true
+    gitignore_template = "Node"
+    license_template   = "mit"
+    
+    topics = ["nodejs", "typescript", "api", "terraform-managed"]
+    
+    delete_branch_on_merge = true
+    allow_squash_merge     = true
+    allow_merge_commit     = false
+    allow_rebase_merge     = false
+    
+    branch_protection = {
+      pattern                         = "main"
+      enforce_admins                  = false
+      require_signed_commits          = true
+      require_conversation_resolution = true
+      
+      required_pull_request_reviews = {
+        required_approving_review_count = 2
+        dismiss_stale_reviews           = true
+        require_code_owner_reviews      = false
+        require_last_push_approval      = true
+      }
+      
+      required_status_checks = {
+        strict   = true
+        contexts = ["ci/tests", "ci/lint"]
+      }
+    }
+  }
+
+  # Example 2: Private repository with moderate protection
+  "personal-project" = {
+    description = "My personal project"
+    visibility  = "private"
+    
+    has_issues = true
+    has_wiki   = false
+    
+    auto_init          = true
+    gitignore_template = "Python"
+    license_template   = "apache-2.0"
+    
+    topics = ["python", "personal", "terraform-managed"]
+    
+    vulnerability_alerts = true
+    
+    branch_protection = {
+      pattern                         = "main"
+      require_conversation_resolution = true
+      
+      required_pull_request_reviews = {
+        required_approving_review_count = 1
+        dismiss_stale_reviews           = true
+      }
+    }
+  }
+
+  # Example 3: Repository with custom protection settings
+  "experimental-repo" = {
+    description = "Experimental repository with custom settings"
+    visibility  = "private"
+    
+    has_issues      = true
+    has_discussions = true
+    
+    auto_init        = true
+    license_template = "mit"
+    
+    topics = ["experimental", "research"]
+    
+    # Custom merge settings
+    allow_merge_commit     = true
+    allow_squash_merge     = true
+    allow_rebase_merge     = true
+    delete_branch_on_merge = true
+    
+    branch_protection = {
+      pattern                         = "main"
+      require_signed_commits          = true
+      require_conversation_resolution = true
+      allows_force_pushes             = false
+      allows_deletions                = false
+      
+      required_pull_request_reviews = {
+        required_approving_review_count = 1
+        dismiss_stale_reviews           = true
+        require_code_owner_reviews      = true
+      }
+      
+      required_status_checks = {
+        strict   = true
+        contexts = ["test", "build"]
+      }
+    }
+  }
+
+  # Example 4: Repository without branch protection
+  "simple-repo" = {
+    description = "Simple repository without protection"
+    visibility  = "private"
+    
+    has_issues = true
+    auto_init  = true
+    
+    topics = ["simple", "no-protection"]
+    
+    # No branch_protection block - this repo will not have branch protection
+  }
+
+  # Example 5: Template repository
+  "project-template" = {
+    description = "Template for new projects"
+    visibility  = "public"
+    
+    is_template = true
+    
+    has_issues = true
+    auto_init  = true
+    
+    gitignore_template = "Node"
+    license_template   = "mit"
+    
+    topics = ["template", "boilerplate"]
+  }
+
+  # Example 6: Repository with homepage URL
+  "documentation-site" = {
+    description  = "Documentation website"
+    visibility   = "public"
+    homepage_url = "https://docs.example.com"
+    
+    has_issues = true
+    has_wiki   = true
+    
+    topics = ["documentation", "website"]
+    
+    branch_protection = {
+      pattern = "main"
+      
+      required_pull_request_reviews = {
+        required_approving_review_count = 1
+        dismiss_stale_reviews           = true
+      }
+    }
+  }
+}
