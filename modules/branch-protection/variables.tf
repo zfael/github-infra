@@ -23,8 +23,8 @@ variable "require_signed_commits" {
 variable "required_status_checks" {
   description = "Required status checks configuration"
   type = object({
-    strict   = bool           # Require branches to be up to date before merging
-    contexts = list(string)   # List of status checks that must pass
+    strict   = bool         # Require branches to be up to date before merging
+    contexts = list(string) # List of status checks that must pass
   })
   default = null
 }

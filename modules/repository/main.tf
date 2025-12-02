@@ -32,9 +32,9 @@ resource "github_repository" "this" {
   squash_merge_commit_message = var.squash_merge_commit_message
 
   # Security
-  vulnerability_alerts   = var.vulnerability_alerts
-  archive_on_destroy     = var.archive_on_destroy
-  
+  vulnerability_alerts = var.vulnerability_alerts
+  archive_on_destroy   = var.archive_on_destroy
+
   # Template repository
   is_template = var.is_template
 
