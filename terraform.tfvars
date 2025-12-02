@@ -1,4 +1,5 @@
-github_owner = "zfael"
+# GitHub owner (username or organization)
+github_owner = "your-github-username"
 
 repositories = {
   "dota2-scripts" = {
