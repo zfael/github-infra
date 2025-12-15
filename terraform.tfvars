@@ -70,17 +70,5 @@ repositories = {
     topics = []
 
     vulnerability_alerts = true
-
-    branch_protection = {
-      pattern                         = "main"
-      require_conversation_resolution = true
-
-      required_pull_request_reviews = {
-        required_approving_review_count = 1
-        dismiss_stale_reviews           = true
-      }
-
-      force_push_bypassers = ["zfael"]
-    }
   }
 }
