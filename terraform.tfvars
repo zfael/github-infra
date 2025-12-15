@@ -64,7 +64,7 @@ repositories = {
     has_projects  = true
 
     auto_init          = false
-    gitignore_template = "Typescript"
+    gitignore_template = "Node"
     license_template   = ""
 
     topics = []
