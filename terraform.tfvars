@@ -128,8 +128,8 @@ repositories = {
     has_issues = true
     has_wiki   = false
 
-    auto_init          = true
-    license_template   = "mit"
+    auto_init        = true
+    license_template = "mit"
 
     topics = []
 
