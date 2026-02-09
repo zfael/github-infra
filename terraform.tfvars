@@ -121,4 +121,28 @@ repositories = {
       }
     }
   },
+  "brn" = {
+    description = ""
+    visibility  = "public"
+
+    has_issues = true
+    has_wiki   = false
+
+    auto_init          = true
+    license_template   = "mit"
+
+    topics = []
+
+    vulnerability_alerts = true
+
+    branch_protection = {
+      pattern                         = "main"
+      require_conversation_resolution = true
+
+      required_pull_request_reviews = {
+        required_approving_review_count = 1
+        dismiss_stale_reviews           = true
+      }
+    }
+  },
 }
