@@ -162,4 +162,21 @@ repositories = {
 
     vulnerability_alerts = true
   },
+  "wzz-bud" = {
+    description = ""
+    visibility  = "private"
+
+    has_issues    = true
+    has_wiki      = true
+    has_downloads = true
+    has_projects  = true
+
+    auto_init          = false
+    gitignore_template = "Rust"
+    license_template   = ""
+
+    topics = []
+
+    vulnerability_alerts = true
+  },
 }
