@@ -179,4 +179,21 @@ repositories = {
 
     vulnerability_alerts = true
   },
+  "dotfiles" = {
+    description = "Personal dotfiles"
+    visibility  = "private"
+
+    has_issues    = true
+    has_wiki      = false
+    has_downloads = false
+    has_projects  = false
+
+    auto_init          = false
+    gitignore_template = ""
+    license_template   = ""
+
+    topics = []
+
+    vulnerability_alerts = true
+  },
 }
