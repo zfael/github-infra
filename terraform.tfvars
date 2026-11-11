@@ -221,4 +221,21 @@ repositories = {
 
     vulnerability_alerts = true
   },
+  "bountytrade" = {
+    description = "Dota 2 giftables marketplace for Brazil"
+    visibility  = "private"
+
+    has_issues    = true
+    has_wiki      = false
+    has_downloads = false
+    has_projects  = true
+
+    auto_init          = false
+    gitignore_template = "Node"
+    license_template   = ""
+
+    topics = ["dota2", "marketplace", "typescript"]
+
+    vulnerability_alerts = true
+  },
 }
