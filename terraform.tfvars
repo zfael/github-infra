@@ -238,4 +238,21 @@ repositories = {
 
     vulnerability_alerts = true
   },
+  "study-materials" = {
+    description = ""
+    visibility  = "private"
+
+    has_issues    = false
+    has_wiki      = false
+    has_downloads = false
+    has_projects  = false
+
+    auto_init          = true
+    gitignore_template = ""
+    license_template   = ""
+
+    topics = []
+
+    vulnerability_alerts = false
+  },
 }
